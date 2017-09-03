@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="view_todo_panel.master.cs" Inherits="view_todo_panel" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table width="100%">
+           <tr>
+                <td widht = "10%">
+                
+                </td>
+             <td width = "80%">
+                 <img src="images/top.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                    
+                                    
+             </td>
+             <td  widht = "10%">
+             
+                 &nbsp;</td>
+           </tr>
+        </table>
+    </div>
+    
+     <div>
+        <table width="100%">
+           <tr>
+                <td widht = "10%">
+                
+                </td>
+             <td width = "80%" style="background:#EFEFEF">
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                 
+             </td>    
+             <td  widht = "10%">
+             
+             </td>
+           </tr>
+        </table>
+    </div>
+    
+    
+    </form>
+</body>
+</html>

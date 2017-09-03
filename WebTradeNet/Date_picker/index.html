@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<title>datePicker - mootools</title>
+	<link href="images/tn_ico_logo.gif" rel="icon" type="image/vnd.microsoft.icon" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="_web.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="mootools-1.2-core.js"></script>
+	<script type="text/javascript" src="_class.datePicker.js"></script>
+	<script type="text/javascript">//<![CDATA[
+	window.addEvent('domready',function(){
+
+		//Ejemplo 1
+		$('fecha01').datePicker();
+
+		//Ejemplo 2
+		$('fecha02').datePicker({klass: 'black_datePicker',days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+			draggable: true,
+			position: {x:'right',y:'top'},
+			offset: {x:10,y:-100},
+			firstday: 3
+		},'click');
+
+		//Ejemplo 3
+		var fecha03 = $('fecha03').getPrevious();
+		var dp3 = $('fecha03').datePicker({
+			format: '%DD %d, %MM %Y | %D %d %M %y | %Y-%m-%d',
+			from: [2008,10,11],
+			to: [2009,0,24],
+			initial: [2008,10,18],
+			setInitial: true,
+			updateElement: false,
+			onShow: function(container){
+				container.fade('hide').fade('in');
+			},
+			onHide: function(container){
+				container.fade('out');
+			},
+			onUpdate: function(){
+				fecha03.set('html',this.format());
+			}
+		},'click');
+
+		var inputs03 = $('sample3').getElements('input,button').associate(['fecha','formato','set']);
+		inputs03.set.addEvent('click',function(){
+			var date = inputs03.fecha.value.split('/');
+			dp3.setFullDate(date[2].toInt(),date[1].toInt()-1,date[0].toInt());
+			dp3.options.format = inputs03.formato.value;
+			dp3.update();
+		});
+
+		//Ejemplo 4
+		var hoy = new Date();
+		var salidaFrom = new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate()+7);
+		salidaFrom = [salidaFrom.getFullYear(),salidaFrom.getMonth(),salidaFrom.getDate()];
+
+		var dpFechaRetorno = $('fecha05_2').datePicker();
+		var dpFechaSalida = $('fecha05_1').datePicker({
+			from: salidaFrom,
+			initial: salidaFrom,
+			setInitial: true,
+			onUpdate: function(date){
+				var retornoFrom = new Date(date.y,date.m,date.d+14);
+				var retornoTo = new Date(date.y,date.m,date.d+14+30);
+				dpFechaRetorno.options.from = [retornoFrom.getFullYear(),retornoFrom.getMonth(),retornoFrom.getDate()];
+				dpFechaRetorno.options.to = [retornoTo.getFullYear(),retornoTo.getMonth(),retornoTo.getDate()];
+				dpFechaRetorno.setFullDate(date.y,date.m,date.d+14).update();
+			}
+		});
+
+	});
+	//]]></script>
+</head>
+<body>
+<div id="cont">
+
+<h1>&nbsp;</h1>
+
+<!-- EJEMPLO 1 -->
+<h2>&nbsp;</h2>
+<div class="sample">
+	<p><input type="text" id="fecha01" value="dd/mm/yyyy" /></p>
+</div>
+
+<!-- EJEMPLO 2 -->
+</div>
+</body>
+</html>

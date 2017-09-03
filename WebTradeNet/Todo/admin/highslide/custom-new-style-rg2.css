@@ -1,0 +1,15 @@
+#topbar2
+{   
+	padding:1px;
+	VISIBILITY: hidden;
+	BORDER-TOP: #CCCCCC 1px solid;
+	BORDER-BOTTOM: #CCCCCC 1px solid;
+	BORDER-RIGHT: #CCCCCC 1px solid;
+	BORDER-LEFT: #CCCCCC 1px solid;
+	WIDTH: 240px;
+	POSITION: absolute;
+	BACKGROUND-COLOR: white;
+	height:17px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}

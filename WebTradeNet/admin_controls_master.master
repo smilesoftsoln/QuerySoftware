@@ -1,0 +1,308 @@
+﻿<%@ Master Language="VB" CodeFile="admin_controls_master.master.vb" Inherits="admin_controls_master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TradeNet</title>
+      <LINK rel="stylesheet" type="text/css" href="highslide/custom-new-style-rg2.css" title="custom-new-style-rg.css" />
+<script src="highslide/inplace2.js" type="text/javascript"></script>
+
+    <link href="layout.css" type="text/css" rel="stylesheet"  />
+    <link href="images/tn_ico_logo.gif" rel="icon" type="image/vnd.microsoft.icon" />
+    <script type="text/javascript"></script>
+    <script language="JavaScript">
+var ie=document.all
+var dom=document.getElementById
+var ns4=document.layers
+var calunits=document.layers? "" : "px"
+var bouncelimit=0 
+var direction="up"
+function initbox(){
+if (!dom&&!ie&&!ns4)
+return
+crossobj=(dom)?document.getElementById("dropin").style : ie? document.all.dropin : document.dropin
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+crossobj.top=scroll_top-0+calunits
+crossobj.visibility=(dom||ie)? "visible" : "show"
+dropstart=setInterval("dropin()",00)
+}
+function dropin(){
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+if (parseInt(crossobj.top)<100+scroll_top)
+crossobj.top=parseInt(crossobj.top)+40+calunits
+else{
+clearInterval(dropstart)
+bouncestart=setInterval("bouncein()",0)
+}
+}
+function bouncein(){
+crossobj.top=parseInt(crossobj.top)-bouncelimit+calunits
+if (bouncelimit<0)
+bouncelimit+=8
+bouncelimit=bouncelimit*-1
+if (bouncelimit==0){
+clearInterval(bouncestart)
+}
+}
+function dismissbox(){
+if (window.bouncestart) clearInterval(bouncestart)
+crossobj.visibility="hidden"
+}
+function truebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+window.onload=initbox
+</script>
+<script type="text/javascript">    
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+    hs.objectLoadTime = 'after';
+</script>
+<script type="text/javascript"> 
+/***********************************************
+* Show Hint script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+		
+var horizontal_offset="9px" //horizontal offset of hint box from anchor link
+
+/////No further editting needed
+
+var vertical_offset="0" //horizontal offset of hint box from anchor link. No need to change.
+var ie=document.all
+var ns6=document.getElementById&&!document.all
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=(whichedge=="rightedge")? parseInt(horizontal_offset)*-1 : parseInt(vertical_offset)*-1
+if (whichedge=="rightedge"){
+var windowedge=ie && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-30 : window.pageXOffset+window.innerWidth-40
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetWidth+parseInt(horizontal_offset)
+}
+else{
+var windowedge=ie && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetHeight
+}
+return edgeoffset
+}
+
+function showhint(menucontents, obj, e, tipwidth){
+if ((ie||ns6) && document.getElementById("hintbox")){
+dropmenuobj=document.getElementById("hintbox")
+dropmenuobj.innerHTML=menucontents
+dropmenuobj.style.left=dropmenuobj.style.top=-500
+if (tipwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=tipwidth
+}
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+obj.offsetWidth+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+"px"
+dropmenuobj.style.visibility="visible"
+obj.onmouseout=hidetip
+}
+}
+
+function hidetip(e){
+dropmenuobj.style.visibility="hidden"
+dropmenuobj.style.left="-500px"
+}
+
+function createhintbox(){
+var divblock=document.createElement("div")
+divblock.setAttribute("id", "hintbox")
+document.body.appendChild(divblock)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", createhintbox, false)
+else if (window.attachEvent)
+window.attachEvent("onload", createhintbox)
+else if (document.getElementById)
+window.onload=createhintbox
+
+</script>
+<style type="text/css">
+body
+{
+    background-color:#E8F5FD;
+}
+#hintbox{ /*CSS for pop up hint box */
+position:absolute;
+top: 0;
+background-color: lightyellow;
+width: 150px; /*Default width of hint.*/ 
+padding: 3px;
+border:1px solid black;
+font:normal 11px Verdana;
+line-height:18px;
+z-index:100;
+border-right: 3px solid #989696;
+border-bottom: 3px solid #989696;
+visibility: hidden;
+}
+
+.hintanchor{ /*CSS for link that shows hint onmouseover*/
+font-weight: bold;
+color: navy;
+margin: 3px 8px;
+}
+
+</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+<script type="text/javascript">
+
+loadTopMenu = function() 
+
+{	
+
+if (document.all&&document.getElementById) 
+
+ {		
+
+  menunavParent = document.getElementById("nav");	
+
+   for (x=0; x < menunavParent.childNodes.length; x++) 
+     {		
+        menunode = menunavParent.childNodes[x];
+
+           if (menunode.nodeName=="LI") 
+             {			
+             menunode.onmouseover=function() 
+                {				
+                this.className+=" over";			
+                }			
+               menunode.onmouseout=function() 
+                {				
+                  this.className=this.className.replace(" over", "");
+	  }
+           }
+        }
+     }
+}
+window.onload=loadTopMenu;
+</script>
+<script type="text/javascript">
+
+loadTopMenu = function() 
+
+{	
+
+if (document.all&&document.getElementById) 
+
+ {		
+
+  menunavParent = document.getElementById("nav");	
+
+   for (x=0; x < menunavParent.childNodes.length; x++) 
+     {		
+        menunode = menunavParent.childNodes[x];
+
+           if (menunode.nodeName=="LI") 
+             {			
+             menunode.onmouseover=function() 
+                {				
+                this.className+=" over";			
+                }			
+               menunode.onmouseout=function() 
+                {				
+                  this.className=this.className.replace(" over", "");
+	  }
+           }
+        }
+     }
+}
+window.onload=loadTopMenu;
+</script>
+    <form id="form1" runat="server">
+    <div>
+    <div class="hod_runn_main">
+        <div class="ff_window">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td >
+                    <img src="images/nev_btns.jpg" border="0" usemap="#Map" />
+                    <map name="Map" id="Map">
+                    <area shape="circle" coords="18,18,13" href="JavaScript:history.back()" />
+                    <area shape="circle" coords="53,17,12" href="JavaScript:history.forward()" />
+                    </map>
+                </td>
+               
+            </tr>
+        </table>   
+      </div>
+    </div>
+    
+    <div class="admin_contr_main">
+        <div class="admin_contr_main_left">
+            <b>Admin Options</b> 
+            
+            <ul  id="nav">
+                <li><a href="admin_controls.aspx">Home</a></li>
+                <li><a href="admin_cantrol_add_Branch_Emp.aspx">Add Branch Employee</a></li>
+                <li><a href="admin_cantrol_add_Dept_Emp.aspx">Add Department Employee</a></li>
+                <li><a href="admin_cantrol_add_Branch.aspx">Add New Branch Entry</a></li>
+                <li><a href="admin_cantrol_add_dept.aspx">Add New Department</a></li>
+                <li><a href="admin_cantrol_add_HOD.aspx">Add Department HOD</a></li>
+                <li><a href="view_all_users.aspx">View All Users</a></li>
+                <li><a href="edit.aspx">Edit Users</a></li>
+                <li><a href="admin_user_login_history.aspx">User Login History</a></li>
+                <li><a href="admin_backup_restore_DB.aspx">Backup Database</a></li>
+                      <!--  <ul>
+                            <li><a href="edit.aspx?usr=BE&TnCAREe.html">Branch Employee</a></li>
+                            <li><a href="edit.aspx?usr=BH&TnCAREe.html">Branch Head</a></li>
+                            <li><a href="edit.aspx?usr=DE&TnCAREe.html">Department employee</a></li>
+                            <li><a href="edit.aspx?usr=HOD&TnCAREe.html">Head Of Department</a></li>
+                            <li><a href="edit.aspx?usr=ADMIN&TnCAREe.html">Admin</a></li>
+                        </ul> -->
+               
+            </ul>
+        
+        
+        </div>
+        <div class="admin_contr_main_right">
+            <div class="admin_contr_main_right_insede">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+   
+    </div>
+    <DIV style="right:1px; visibility: visible; bottom:1px; " id="topbar2">
+	<TABLE width="100%">
+		<TBODY><TR>
+			<TD width="100%" valign="bottom">
+		Developed at IT Department (TradeNet Kolhapur)  	
+			</TD>
+		</TR>
+	</TBODY></TABLE>
+</DIV>
+    </form>
+</body>
+</html>

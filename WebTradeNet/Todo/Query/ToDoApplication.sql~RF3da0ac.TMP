@@ -1,0 +1,195 @@
+create database db_TN_todo
+use db_TN_todo
+--------------------------
+
+create table tbl_task_master
+	(
+		id	int		primary key,
+		subject_	nvarchar(200),
+		desc_		nvarchar (2000),
+		privacy_	nvarchar(50),
+		task_from_id int,
+		task_to_id	int,	
+		stts_		nvarchar(100),
+		start_time	smalldatetime,
+		mentained_end_time	smalldatetime,
+		actual_end_time		smalldatetime,
+		rcvr		nvarchar(200),
+		attch_url	nvarchar(500)
+	
+	)
+--------------------------
+create table tbl_loginer_master
+	(
+		id			int primary key,	
+		username_	nvarchar(150),
+		password_	nvarchar(150),
+		name_		nvarchar(250),
+		post_		nvarchar(50),
+		phone_number nvarchar(100),
+		email_id	nvarchar(200),
+		forign_id	int,	
+		block_		nvarchar(50),
+		last_login	nvarchar(100),
+		rcvr_		nvarchar(100)
+	)
+--------------------------
+create table tbl_login_stts
+	(
+		id			int primary key,
+		loginer_id	int,
+		login_stts	nvarchar(100)
+	)
+--------------------------
+create table tbl_mngt_master
+	(
+		id int primary key,
+		mngt_name nvarchar(100),
+		mngt_desc nvarchar(500),
+		manager_loginer_id int
+	)
+--------------------------
+create table tbl_level_master
+	(
+		id			int primary key,	
+		level_name	nvarchar(100),
+		short_key	nvarchar(50)
+	)
+--------------------------
+create table tbl_delly_todo_master
+	(
+		id			int primary key,
+		subject_	nvarchar(100),
+		Desc_		nvarchar(500),
+		privacy_	nvarchar(50),
+		toDo_from_id int,
+		toDo_to_id	int,
+		assigned_date smalldatetime,
+		end_time	smalldatetime,	
+		stts_		nvarchar(50),
+		rcvr_note	nvarchar(200),
+		attch_url	nvarchar(500)
+	)
+--------------------------
+create table tbl_dept_master
+	(	
+		id int primary key,
+		dept_name nvarchar(100),
+		dept_Desc nvarchar(500),
+		mngt_id int,	
+		hod_loginer_id int
+	)
+--------------------------
+create table tbl_weekly_todo_master
+	(
+		id			int primary key,
+		subject_	nvarchar(100),
+		Desc_		nvarchar(500),
+		privacy_	nvarchar(50),
+		toDo_from_id int,
+		toDo_to_id	int,
+		assigned_date smalldatetime,
+			week_day nvarchar(100),
+		end_time	smalldatetime,	
+		stts_		nvarchar(50),
+		rcvr_note	nvarchar(200),
+		attch_url	nvarchar(500)
+	)
+--------------------------
+create table tbl_monthly_todo_master
+	(
+		id			int primary key,
+		subject_	nvarchar(100),
+		Desc_		nvarchar(500),
+		privacy_	nvarchar(50),
+		toDo_from_id int,
+		toDo_to_id	int,
+		assigned_date smalldatetime,
+			month_date	int,
+		end_time	smalldatetime,	
+		stts_		nvarchar(50),
+		rcvr_note	nvarchar(200),
+		attch_url	nvarchar(500)
+	)
+--------------------------
+create procedure sp_chk_username_availabality
+@username_ nvarchar(100)
+as
+select * from tbl_loginer_master where username_=@username_
+--------------------------
+alter procedure sp_insert_tbl_loginer_master
+		@username_	nvarchar(150),
+		@password_	nvarchar(150),
+		@name_		nvarchar(250),
+		@post_		nvarchar(50),
+		@phone_number nvarchar(100),
+		@email_id	nvarchar(200)
+as
+Declare @N_id varchar(20) ;
+set @N_id=(select isnull(max(id)+1,1)from tbl_loginer_master)
+insert into tbl_loginer_master values 
+(
+	@N_id,
+	@username_,
+	@password_,
+	@name_,
+	@post_,
+	@phone_number,
+	@email_id,
+	0,
+	'NA',
+	'Not Set',
+	'NA'
+)
+--------------------------
+insert into tbl_loginer_master values(1,'admin','12','ADMINISTRATOR','ADMIN','00000','admin@admin.com',1001,'NA','NA','NA')
+
+--------------------------
+create procedure sp_get_loginer
+@username_ nvarchar(100),
+@password_ nvarchar(100)
+as
+select * from tbl_loginer_master where username_=@username_ and password_=@password_
+--------------------------
+create procedure sp_get_alert_from_loginer
+as
+select * from tbl_loginer_master where forign_id=0
+--------------------------
+create procedure sp_get_user_by_id
+@uid int
+as
+select * from tbl_loginer_master where id=@uid
+
+--------------------------
+create procedure sp_get_depts
+as
+select * from tbl_dept_master
+
+--------------------------
+create procedure sp_dept_available_or_not
+@dept_name nvarchar(100)
+as
+select * from tbl_dept_master where dept_name=@dept_name
+--------------------------
+create procedure sp_get_managements_by_mng_name
+@mng_name nvarchar(100)
+as
+select * from tbl_mngt_master where mngt_name=@mng_name
+--------------------------
+create procedure sp_insert_management
+@mng_name nvarchar(100),
+@mng_desc nvarchar(500)
+as
+Declare @N_id varchar(20) ;
+set @N_id=(select isnull(max(id)+1,1)from tbl_mngt_master)
+insert into tbl_mngt_master values
+	(
+		@N_id,
+		@mng_name,
+		@mng_desc,
+		0
+	)
+--------------------------
+create procedure sp_get_alert_from_managements
+as
+select * from tbl_mngt_master where  manager_loginer_id=0

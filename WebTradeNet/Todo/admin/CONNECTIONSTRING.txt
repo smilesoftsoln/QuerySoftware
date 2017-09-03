@@ -1,0 +1,4 @@
+﻿SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myconstring"].ConnectionString); 
+
+
+Response.Write(@"<script language='javascript'>alert('This User is not valid please enter correct loginid !')</script>");

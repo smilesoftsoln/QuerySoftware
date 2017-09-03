@@ -1,0 +1,178 @@
+/* TATA Teleservices styles {Interface}  */
+
+
+#container {margin:0 auto;	padding:0; width:198px;}
+.clr{ margin:0; padding:0; line-height:0; clear:both;}
+.flo-rt{ float:right;}
+.flo-lt{float:left}
+.flo-lt div{ float:none; margin:0; padding:0;}
+
+a{ text-decoration:none; outline:none; border:none; color:#3b3b3b; text-decoration:none;}
+a:hover{color:#047fd0; text-decoration:underline}
+.in2in-rightcol a{ text-decoration:none; outline:none; border:none; color:#047fd0; text-decoration:underline;}
+.in2in-rightcol a:hover{color:#3b3b3b; text-decoration:none}
+p{ margin:0; padding:5px 0 0 0;}
+h1{ margin:0; padding:15px 0 10px 0; color:#0088d8 !important; font-size:18px; font-weight:bold;}
+h2{ margin:0; padding:10px 0 5px 0; color:#0088d8; font-size:16px; font-weight:bold;}
+h3{ margin:0; padding:5px 0 3px 0; color:#0088d8; font-size:14px; font-weight:bold;}
+h4{ margin:0; padding:3px 0 2px 0; color:#0088d8; font-size:12px; font-weight:normal;}
+h1 span{ color:#f68727 !important;}
+h2 span{ color:#f68727;}
+h3 span{ color:#f68727;}
+h4 span{ color:#f68727;}
+
+#header {margin:0; padding:0; }
+.logo {margin:0; float:left; width:322px;}
+.logo-rt-box {float:right; width:500px; padding:12px 0 0 0;}
+.shop-online{float:right; padding:0 0 0 20px; margin:0;}
+.shop-online ul{ height:auto !important; border:none !important; width:210px !important;}
+
+.hindi-box{float:right; padding:0 0 0 15px; margin:0;}
+
+.slide-box-main{ margin:15px 0 0 0; padding:0;}
+.slide-box2{ background:url(../images/slide-box2-bg.gif) repeat-y left; }
+.slide-box2-top{ background:url(../images/slide-box2-top.gif) no-repeat top left; padding:10px 0;}
+.slide-box2-bot{ background:url(../images/slide-box2-bot.gif) no-repeat bottom left;}
+.bob2-box{ margin:0; padding:0 10px 0 4px; float:left;}
+
+.search {background:url(../images/search-box-bg.gif) repeat-x top; width:122px;	height:20px;}
+.search-lt {float:left; height:20px; width:3px;}
+.input-search{ margin:0; padding:4px 0 1px 2px; color:#6c6c6c; font-size:11px; border:none; width:88px; display:inline; background:none;}
+.example {border: 0 solid #fff; line-height:12px;	font-size:11px;}
+.search-rt {float:right; width:28px;}
+.sn-box {background:url(../images/sb-bg.gif) repeat-x top; width:184px;	height:28px;}
+.sn-box-lt {float:left; height:28px; width:3px;}
+.input-sn-box{ height:18px; padding:4px 0 1px 2px; margin:2px 0 1px 2px; color:#6c6c6c; font-size:13px; border:none; width:140px; display:inline; background:url(../images/sb-input-bg.gif) repeat-x top;}
+.example {border: 0 solid #fff; line-height:12px;	font-size:11px;}
+.sn-box-rt {float:right; width:28px;}
+
+/* ----start individual navigation buttons ---- */
+#navigation{ margin:0; padding:0; height:30px;}
+#navigation ul{margin:0; padding:0;}
+#navigation ul li{margin:0; padding:0; list-style:none; float:left;}
+#navigation ul li a{text-align:center; text-decoration:none; margin:0; padding:0; display:block; background:none !important;}
+#navigation ul li a span{visibility:hidden;}
+
+#nav1, #nav1 a{background:url(../images/tata-teleservices-tb.gif) no-repeat top left;	width:160px; height:30px;}
+#nav1 a:hover, #nav1 a.select{background:url(../images/tata-teleservices-tb.gif) no-repeat bottom left;}
+#nav2, #nav2 a{	background:url(../images/tata-indicom-tb.gif) no-repeat left top; width:129px;	height:30px;}
+#nav2 a:hover, #nav2 a.select{background:url(../images/tata-indicom-tb.gif) no-repeat left bottom;}
+#nav3, #nav3 a{background:url(../images/tata-photon-tb.gif) no-repeat left top; width:125px; height:30px;}
+#nav3 a:hover, #nav3 a.select{background:url(../images/tata-photon-tb.gif) no-repeat left bottom;}
+#nav4, #nav4 a{background:url(../images/tata-walky-tb.gif) no-repeat left top; width:117px; height:30px;}
+#nav4 a:hover, #nav4 a.select{background:url(../images/tata-walky-tb.gif) no-repeat left bottom;}
+#nav5, #nav5 a{background:url(../images/enterprise-services-tb.gif) no-repeat left top; width:174px; height:30px;}
+#nav5 a:hover, #nav5 a.select{background:url(../images/enterprise-services-tb.gif) no-repeat left bottom;}
+#nav6, #nav6 a{background:url(../images/tata-virgin-tb.gif) no-repeat left top; width:116px; height:30px;}
+#nav6 a:hover, #nav6 a.select{background:url(../images/tata-virgin-tb.gif) no-repeat left bottom;}
+#nav7, #nav7 a{background:url(../images/tata-docomo-tb.gif) no-repeat left top; width:137px; height:30px;}
+#nav7 a:hover, #nav7 a.select{background:url(../images/tata-docomo-tb.gif) no-repeat left bottom;}
+
+/*start styles for selected menu*/
+#nav1-slt, #nav1-slt a{background:url(../images/tata-teleservices-tb.gif) no-repeat left bottom; width:160px; height:30px;}
+#nav2-slt, #nav2-slt a{background:url(../images/tata-indicom-tb.gif) no-repeat left bottom; width:129px;	height:30px;}
+#nav3-slt, #nav3-slt a{background:url(../images/tata-photon-tb.gif) no-repeat left bottom; width:125px; height:30px;}
+#nav4-slt, #nav4-slt a{	background:url(../images/tata-walky-tb.gif) no-repeat left bottom; width:117px; height:30px;}
+#nav5-slt, #nav5-slt a{	background:url(../images/enterprise-services-tb.gif) no-repeat left bottom; width:174px; height:30px;}
+#nav6-slt, #nav6-slt a{	background:url(../images/tata-virgin-tb.gif) no-repeat left bottom; width:116px; height:30px;}
+#nav7-slt, #nav7-slt a{	background:url(../images/tata-docomo-tb.gif) no-repeat left bottom; width:137px; height:30px;}
+/*end styles for selected menu*/
+.es-ul-position{ margin-left:-180px!important;}
+/* ----End individual navigation buttons ---- */
+#main-banner{margin:0; padding:0;}
+
+#footer {margin:0 auto; width:958px; padding:10px 0 10px 0; line-height:20px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#3b3b3b; }
+#footer .footernav{ margin:0; padding:0; text-align:center;}
+#footer .footernav a{font-family:Arial, Helvetica, sans-serif; color:#3b3b3b; text-transform:uppercase; font-weight:bold; padding:0 7px;}
+#footer .footernav a:hover{color:#047fd0; }
+
+#footer .footerw3c{ float:right; width:190px; text-align:right; padding:3px 0 0 0;}
+#footer .footerw3c a{ border:none; outline:none; padding:0 8px 0 4px;}
+.footerw3c .accessible{ padding:0; font-size:11px; text-align:right;}
+
+.copy-col{margin:0; padding:8px 0 0 8px; font-size:11px; float:left; width:400px; text-align:left;}
+.copy-col a{ border:none; outline:none; padding:0 0 0 1px; text-decoration:underline;}
+/*START tab box2 styles*/
+#flo-tab-home2{ margin:0; padding:0;}
+#flo-tab-home2 ul.tabs2 {margin: 0; padding: 0; list-style: none; width: 100%; position:relative}
+#flo-tab-home2 ul.tabs2 li {float:left; margin: 0; padding:0 12px 0 8px; background:none !important; border-left: none; overflow: hidden !important; position: relative; }
+#flo-tab-home2 ul.tabs2 li a {text-decoration: none; font-weight:bold; color:#727171; font-size:12px; background:none!important;	outline: none;}
+#flo-tab-home2 ul.tabs2 li a:hover {opacity: 0.8; color:#008dda; filter: alpha(opacity = 80); width: 100%; /* stupid IE */}	
+html #flo-tab-home2 ul.tabs2 li.active, html #flo-tab-home2 ul.tabs2 li.active a:hover  { color:#008dda; background:#000; /*opacity: 0.8;  filter: alpha(opacity = 80);*/  /* stupid IE */}
+
+#flo-tab-home{ margin:0; padding:0;}
+#flo-tab-home ul.tabs {	margin: 0; padding: 7px 0 0 5px; list-style: none; width: 100%; display:block; height:40px;}
+#flo-tab-home ul.tabs li {	float:left; margin:0; padding:0; background: none; border-left: none; overflow: hidden !important; position: relative; }
+#flo-tab-home ul.tabs li a {	text-decoration: none; margin:0 5px; padding:0 5px; font-weight:bold; color:#727171; font-size:12px; outline: none;}
+#flo-tab-home ul.tabs li a:hover {	color:#008dda !important;/*opacity: 0.8;  filter: alpha(opacity = 80); width: 100%;*/ /* stupid IE */}	
+html #flo-tab-home ul.tabs li.active {
+	 color:#008dda !important; display:block; background:#fff; /*opacity: 0.8;  filter: alpha(opacity = 80); url(../images/rt-top-tab-ltbg.gif) no-repeat top left*/  /* stupid IE */}
+html #flo-tab-home ul.tabs li a:focus {	 color:#008dda !important; display:block; background:#fff; /*opacity: 0.8;  filter: alpha(opacity = 80); url(../images/rt-top-tab-ltbg.gif) no-repeat top left*/  /* stupid IE */}
+html #flo-tab-home ul.tabs li.active span {	 color:#008dda; padding:0 10px !important; display:block;/*  background:#fff url(../images/rt-top-tab-rtbg.gif) no-repeat top right !important;*/ /*opacity: 0.8;  filter: alpha(opacity = 80);*/  /* stupid IE */
+}
+.pad-nav{line-height:36px !important;}
+.tab_container {clear: both; margin:0 0px 0 0px; }
+
+.tab_content{ margin:0; padding:0 4px;}
+.tab_workfield{ margin:0; padding:0 5px 5px 10px; border-top:none!important; line-height:22px; color:#2a348c;}
+/*END tab box2 styles*/
+
+/*start slide top popup*/
+#tt1{ margin:0; padding:0;}
+#tt1 ul{ margin:0; padding:0; list-style:none; position:absolute; z-index:200}
+#tt1 ul li { margin: 0px;}
+#tt1 ul li a { text-decoration: none;  display: block;}
+#tt1 ul li a:link, li a:visited { }
+#tt1 ul li a:hover {color:#EE8;}
+#tt2{ margin:0; padding:0;}
+#tt2 ul{ margin:0; padding:0; list-style:none; position:absolute; z-index:200}
+#tt2 ul li {margin: 0px;}
+#tt2 ul li a {text-decoration: none;  display: block;}
+#tt2 ul li a:link, li a:visited {color: 3b3b3b; }
+#tt2 ul li a:hover { color:#EE8;}
+#tt3{ margin:0; margin-left:-120px !important; padding:0;}
+#tt3 ul{ margin:0; padding:0; list-style:none; position:absolute; z-index:200}
+#tt3 ul li { margin: 0px;}
+#tt3 ul li a { text-decoration: none; display: block;}
+#tt3 ul li a:link, li a:visited {color: 3b3b3b;}
+#tt3 ul li a:hover {color:#EE8;}
+/*End slide top popup*/
+
+/*Start squish and stretch tab under banner*/
+#squish-stretch-main{ margin:0px 0 0 0; padding:0; height:0px;}
+/*End squish and stretch tab under banner*/
+
+.myaccount-rt-box{ margin:0; padding:0; float:left; width:199px; height:141px; }
+
+
+/*Start myaccount-popbox style*/
+.myaccount-popbox{	width:180px !important; height:80px!important;	padding:30px 20px!important;	background:#fff!important ;}
+
+.myaccount-popbox-tt
+{	
+	width:225px !important; 
+	height:200px!important;	
+	padding:20px 5px!important;
+}
+
+.ma-mainbox{width:180px!important; padding:4px 0!important;}
+.ma-mainbox2{width:180px!important; padding:4px 0 4px 5px!important;}
+.ma-mainbox2 a{ margin:0; padding:0 4px; float:left;}
+.ma-mainbox2 a:hover{ color:#047fd0 !important; text-decoration:underline !important;}
+.ma-mainbox .ma-input-ltbg{ margin:0; padding:0; background:url(../images/ma-input-ltbg.gif) no-repeat left top;  height:24px;}
+.ma-mainbox .ma-input-rtbg{ margin:0; padding:0 0 0 10px!important; background:url(../images/ma-input-rtbg.gif) no-repeat right top;  height:24px!important;}
+.ma-mainbox .ma-input{ margin:0; padding:4px 0 0 0; border:none; line-height:18px; height:18px; outline:none; background:none; width:158px; font-family:Arial, Helvetica, sans-serif; color:#5b5b5b; font-size:12px;}
+.ma-mainbox .ma-input2{ margin:0 4px 0 0; padding:4px 0 0 0; border:none; line-height:16px; height:18px; outline:none; background:none; width:132px; font-family:Arial, Helvetica, sans-serif; color:#5b5b5b; font-size:12px;}
+/*End myaccount-popbox style*/
+
+
+
+/*follow us*/
+#follow, #follow a{background:url(http://www.tataindicom.com/Theme/default/images/follow-us.gif) no-repeat top left;	width:111px; height:28px;}
+#follow a:hover, #follow a.select{background:url(http://www.tataindicom.com/Theme/default/images/follow-us.gif) no-repeat bottom left;}
+/*follow us*/
+
+/*share*/
+#share, #share a{background:url(http://www.tataindicom.com/Theme/default/images/share-on.gif) no-repeat top left; height:28px;}
+#share a:hover, #share a.select{background:url(http://www.tataindicom.com/Theme/default/images/share-on.gif) no-repeat bottom left;}
+/*share*/

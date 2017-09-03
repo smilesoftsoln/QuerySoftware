@@ -1,0 +1,16 @@
+﻿.btnsubmit
+{
+	color:#FFFFFF;
+	width: 50px;
+	background-color:#80B6E1; 
+	font:"Times New Roman", Times, serif, Arial;	
+	font-size:15px;	
+}
+.btnsubmit:hover
+{
+	color:#DFDFDF;
+	width: 50px;
+	font:"Courier New", Times, serif, Arial;	
+	font-size:18px;
+	background-color:#1D76E2; 
+}

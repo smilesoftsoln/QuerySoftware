@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="branchhead.master.cs" Inherits="branchhead" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="admin/adminstyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table width="100%">
+           <tr>
+                <td widht = "10%">
+                
+                </td>
+             <td width = "80%">
+                 <img src="images/top.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                    
+                 <asp:Label ID="Label1" runat="server" Text="Branch Head" Font-Bold="True" 
+                     Font-Size="XX-Large" ForeColor="#FF3300"></asp:Label>
+                     
+                    <table width = "100%">
+                        <tr>
+                            <td align = "left" width = "15%">
+                                 <a href ="branchhead_login_next.aspx">| HOME |</a>
+                            </td>
+                            <td width = "70%">
+                            
+                            </td>
+                            <td align = "right" width = "15%">
+                            <%--<a href ="Default.aspx">| LOGOUT |</a>&nbsp;</td>--%>
+                                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">| LOGOUT |</asp:LinkButton>
+                            
+                        </tr>                        
+                    </table>   
+                    
+             </td>
+             <td widht = "10%">
+             
+             </td>
+           </tr>
+        </table>
+    </div>
+    
+     <div>
+        <table width="100%">
+           <tr>
+                <td widht = "10%">
+                
+                </td>
+             <td width = "80%" style="background:#E1FAFD">
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                 </asp:ContentPlaceHolder>
+                 
+             </td>    
+             <td  widht = "10%">
+             
+             </td>
+           </tr>
+        </table>
+    </div>
+    
+    
+    </form>
+</body>
+</html>

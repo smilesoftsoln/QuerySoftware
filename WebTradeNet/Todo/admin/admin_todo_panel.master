@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin_todo_panel.master.cs" Inherits="todo" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <link href="adminstyle.css" rel="stylesheet" type="text/css" />
+  
+ <style type="text/css">
+        a
+        {
+	        font-family:Arial, Helvetica, sans-serif;
+	        font-size:12px;
+	        color:#000066;
+	        font-weight:bold;
+	        text-decoration:none; 	
+        }
+        a:hover
+        {
+	        font-family:Arial, Helvetica, sans-serif;
+	        font-size:12px;
+	        color:#CC6600;
+	        font-weight:bold;
+	        text-decoration:underline;
+        	
+        }
+</style>
+
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+    <form id="form1" runat="server">
+    <div>
+        <table width="100%">
+           <tr>
+                <td widht = "10%">
+                
+                </td>
+             <td width = "80%">
+                <table width = "100%" >
+                    <tr>
+                        <td width = "40%" align = "left">
+                            <img src="../images/top.jpg" />
+                        </td>
+                        <td width = "40%" align = "left">
+                            <asp:Label ID="Label1" runat="server" Text="TODO" Font-Bold="True" Font-Size="XX-Large" ForeColor="#FF3300"></asp:Label>
+                        </td>
+                        <td width = "20%" align ="right">
+                        <a href ="admin.aspx">| HOME |</a> 
+                        </td>
+                    </tr>
+                </table>
+             
+                 
+                    
+                 
+                    
+             </td>
+             <td  widht = "10%">
+             
+                 </td>
+           </tr>
+        </table>
+    </div>
+    
+     <div>
+        <table width="100%">
+           <tr>
+                <td widht = "10%">
+                
+                </td>
+             <td width = "80%" style="background:#E1FAFD">
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                 
+             </td>    
+             <td  widht = "10%">
+             
+             </td>
+           </tr>
+        </table>
+    </div>
+    
+    
+    </form>
+</body>
+</html>

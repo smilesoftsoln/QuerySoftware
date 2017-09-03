@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="master_admin.master.cs" Inherits="admin_master_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+   <link href="adminstyle.css" rel="stylesheet" type="text/css" />
+   <title>Untitled Page</title>
+     <asp:ContentPlaceHolder id="head" runat="server">     
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body bgcolor=""  >
+    <form id="form1" runat="server">
+    <div>
+    <table width="100%" style="height: 133px" >
+        <tr>
+            <td width="20%">
+                        
+            </td>
+            
+            <td width="60%" style="border: thick solid #A49CBC" align="center">
+                        
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/admincontrol2.png" />
+                <br />
+                <a href ="admin.aspx">| HOME |</a> &nbsp; &nbsp; <%--<a href ="../Default.aspx">| LOGOUT |</a>--%>
+                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">| 
+                LOGOUT |</asp:LinkButton>
+                        
+            </td>
+            
+            <td width="20%">
+                        
+            </td>
+        </tr>
+    </table>
+    
+    
+   
+     <table width="100%" >
+        <tr>
+            <td width="20%">
+                        
+            </td>
+            
+            <td width="60%" style="border: thick solid #A49CBC"  bgcolor="#e6f9f9" >
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">                       
+                                       
+                    </asp:ContentPlaceHolder>
+            </td>
+            
+            <td width="20%">
+                        
+            </td>
+        </tr>
+    </table>
+    </div>
+    </form>
+</body>
+</html>

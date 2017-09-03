@@ -1,0 +1,17 @@
+#topbar
+{   
+	PADDING-TOP:0px;
+	PADDING-BOTTOM:0px;
+	PADDING-RIGHT: 0px; 
+	PADDING-LEFT: 0px;
+	VISIBILITY: hidden;
+	BORDER-TOP: #CCCCCC 0px solid;
+	BORDER-BOTTOM: #CCCCCC 0px solid;
+	BORDER-RIGHT: #CCCCCC 0px solid;
+	BORDER-LEFT: #CCCCCC 0px solid;
+	WIDTH: 198px;
+	FONT-FAMILY: Tahoma;
+	POSITION: absolute;
+	BACKGROUND-COLOR: white;
+	height:24px;
+}

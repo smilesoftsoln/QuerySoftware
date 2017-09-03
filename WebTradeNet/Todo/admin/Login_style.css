@@ -1,0 +1,112 @@
+body
+{
+	margin:0px;
+	padding:0px;
+	background-color:#0066FF;
+	overflow:hidden;
+	background-image:url(images/main_bg.jpg);
+	vertical-align:middle;
+	background-position:center;
+	background-position:top;
+	background-repeat:repeat;
+	
+	
+}
+td
+{
+	border:0px;
+	margin:0px;
+	padding:0px;
+}
+table
+{
+	border:0px;
+	margin:0px;
+	padding:0px;
+}
+.main_bg
+{
+	width:100%;
+	height:100%;
+	display:table;
+	margin-left:auto;
+	margin-right:auto;
+}
+a img
+{
+	border:0px;
+}
+.tbl2
+{
+	
+	margin-left:auto;
+	margin-right:auto;
+	vertical-align:middle;
+	background-image:url(images/Login_03.png);
+	background-repeat:no-repeat;
+	width:493px;
+	height:229px;
+	display:block;
+	margin-top:15%;
+	
+}
+.tbl2
+{
+	vertical-align:top;
+}
+.login_td
+{
+	padding-top:0px;
+	padding-left:168px;
+	
+}
+.login_td td
+{
+	padding-top:10px;
+}
+.login_td input
+{
+	background-image:url(images/input_bg.jpg);
+	width:278px;
+	height:17px;
+	border:0px;
+	background-repeat:no-repeat;
+	background-color:transprant;
+	padding-left:25px;
+	
+}
+.login_td select
+{
+	background-image:url(images/input_bg.jpg);
+	width:303px;
+	height:19px;
+	border:0px;
+	background-repeat:no-repeat;
+	background-color:transprant;
+	padding-left:25px;
+	
+}
+.tbl_btn_td
+{
+	padding-left:240px;
+	padding-top:5px;
+}
+.mnbtns
+{
+	text-align:right;
+}
+.minimise
+{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	height:29px;
+	width:160px;
+}
+.auther
+{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	font-size:9px;
+}

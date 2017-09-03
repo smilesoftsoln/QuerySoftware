@@ -1,0 +1,41 @@
+/* CSS Document */
+
+BODY {     scrollbar-3d-light-color:#ffffff;
+           scrollbar-arrow-color:#ffffff;
+           scrollbar-base-color:#ffffff;
+           scrollbar-dark-shadow-color:#ffffff;
+           scrollbar-face-color:#538BD7;
+           scrollbar-highlight-color:#FF8A6A;
+           scrollbar-shadow-color:#ffffff;
+		   margin:0px;
+	}
+
+.bodytext { font-family: tahoma; font-size: 11px; font-weight: regular; color: #555555; line-height: 20px; text-align:justify;}
+.bodytexthead { font-family: tahoma; font-size: 13px; font-weight: bold; color: #0A7BCB; line-height: 20px;}
+.bodytextsubhead { font-family: tahoma; font-size: 12px; font-weight: bold; color: #FA760B; line-height: 20px;}
+
+.mfbodytext { font-family: tahoma; font-size: 11px; font-weight: regular; color: #555555; line-height: 20px;}
+.mfbodytexthead { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #073A5A; }
+.mfbodytextsubhead { font-family: verdana; font-size: 12px; font-style: italic; font-weight: bold; color: #961B02; }
+
+.form { font-family: tahoma; font-size: 12px; font-weight: regular; color: #555555; text-decoration: none; line-height: 18px;}
+.form a:link{ font-family: tahoma; font-size: 12px; font-weight: regular; color: #555555; text-decoration: none;  line-height: 18px;}
+.form a:active{ font-family: tahoma; font-size: 12px; font-weight: regular; color: #555555; text-decoration: none;  line-height: 18px;}
+.form a:visited{ font-family: tahoma; font-size: 12px; font-weight: regular; color: #555555; text-decoration: none;  line-height: 18px;}
+.form a:hover{ font-family: tahoma; font-size: 12px; font-weight: regular; color: #555555; text-decoration: underline;  line-height: 18px;}
+
+.formsubhead { font-family: verdana; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: none; padding-left: 10px; }
+
+.leftmenu { font-family: tahoma; font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none; padding-top: 2px; padding-bottom: 2px; }
+.leftmenu a:link{ font-family: tahoma; font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none;  padding-top: 2px; padding-bottom: 2px;}
+.leftmenu a:active{ font-family: tahoma; font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none;  padding-top: 2px; padding-bottom: 2px;}
+.leftmenu a:visited{ font-family: tahoma; font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: none;  padding-top: 2px; padding-bottom: 2px;}
+.leftmenu a:hover{ font-family: tahoma; font-size: 11px; font-weight: bold; color: #ffffff; text-decoration: underline;  padding-top: 2px; padding-bottom: 2px;}
+
+.research { font-family: verdana; font-size: 12px; font-weight: bold; color: #296516; text-decoration: none;}
+.research a:link{ font-family: verdana; font-size: 12px; font-weight: bold; color: #296516; text-decoration: none;}
+.research a:active{ font-family: verdana; font-size: 12px; font-weight: bold; color: #296516; text-decoration: none;}
+.research a:visited{ font-family: verdana; font-size: 12px; font-weight: bold; color: #296516; text-decoration: none;}
+.research a:hover{ font-family: verdana; font-size: 12px; font-weight: bold; color: #296516; text-decoration: underline;}
+
+.researchtext { font-family: tahoma; font-size: 11px; font-weight: regular; color: #444444; padding-left: 10px; line-height: 18px; padding-top: 3px; text-align: justify; padding-right: 10px;}

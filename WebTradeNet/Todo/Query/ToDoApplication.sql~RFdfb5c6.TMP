@@ -1,0 +1,104 @@
+create database db_TN_todo
+use db_TN_todo
+--------------------------
+
+create table tbl_task_master
+	(
+		id	int		primary key,
+		subject_	nvarchar(200),
+		desc_		nvarchar (2000),
+		privacy_	nvarchar(50),
+		task_from_id int,
+		task_to_id	int,	
+		stts_		nvarchar(100),
+		start_time	smalldatetime,
+		mentained_end_time	smalldatetime,
+		actual_end_time		smalldatetime,
+		rcvr		nvarchar(200),
+		attch_url	nvarchar(500)
+	
+	)
+--------------------------
+create table tbl_loginer_master
+	(
+		id			int primary key,	
+		username_	nvarchar(150),
+		password_	nvarchar(150),
+		name_		nvarchar(250),
+		post_		nvarchar(50),
+		phone_number nvarchar(100),
+		email_id	nvarchar(200),
+		forign_id	int,	
+		block_		nvarchar(50),
+		last_login	nvarchar(100),
+		rcvr_		nvarchar(100)
+	)
+--------------------------
+create table tbl_login_stts
+	(
+		id			int primary key,
+		loginer_id	int,
+		login_stts	nvarchar(100)
+	)
+--------------------------
+create table tbl_mngt_master
+	(
+		id int primary key,
+		mngt_name nvarchar(100),
+		mngt_desc nvarchar(500),
+		manager_loginer_id int
+	)
+--------------------------
+create table tbl_level_master
+	(
+		id			int primary key,	
+		level_name	nvarchar(100),
+		short_key	nvarchar(50)
+	)
+--------------------------
+create table tbl_delly_todo_master
+	(
+		id			int primary key,
+		subject_	nvarchar(100),
+		Desc_		nvarchar(500),
+		privacy_	nvarchar(50),
+		toDo_from_id int,
+		toDo_to_id	int,
+		assigned_date smalldatetime,
+		end_time	smalldatetime,	
+		stts_		nvarchar(50),
+		rcvr_note	nvarchar(200),
+		attch_url	nvarchar(500)
+	)
+--------------------------
+create table tbl_weekly_todo_master
+	(
+		id			int primary key,
+		subject_	nvarchar(100),
+		Desc_		nvarchar(500),
+		privacy_	nvarchar(50),
+		toDo_from_id int,
+		toDo_to_id	int,
+		assigned_date smalldatetime,
+			week_day nvarchar(100),
+		end_time	smalldatetime,	
+		stts_		nvarchar(50),
+		rcvr_note	nvarchar(200),
+		attch_url	nvarchar(500)
+	)
+--------------------------
+create table tbl_monthly_todo_master
+	(
+		id			int primary key,
+		subject_	nvarchar(100),
+		Desc_		nvarchar(500),
+		privacy_	nvarchar(50),
+		toDo_from_id int,
+		toDo_to_id	int,
+		assigned_date smalldatetime,
+			week_day nvarchar(100),
+		end_time	smalldatetime,	
+		stts_		nvarchar(50),
+		rcvr_note	nvarchar(200),
+		attch_url	nvarchar(500)
+	)

@@ -1,0 +1,88 @@
+ 1    /* STANDARÂ TAGS' REDEFINITIONS
+--------------------------------------------------------------------------------------*/
+body{	font-family : Arial, Helvetica, sans-serif;	
+		color : Black;	
+		background-color : #e1e3e9;  
+		font-size: 12px; 
+		background-image: url(bg1.jpg); background-repeat:repeat-y;background-position : center;
+		
+		
+		
+	}
+
+
+/* STRUCTURE
+--------------------------------------------------------------------------------------*/
+td.Visual{	background-image: url(bg_top_visual1.jpg);	background-repeat: no-repeat;  
+	color: White;  padding-left: 9px;  padding-top: 33px;  padding-right: 9px;  
+	font-size: 20px;  font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+ }
+td.Left{	font-family: "MS Sans Serif", Geneva, sans-serif;	font-size: 11px;  
+	background-image: url(bg_leftbox.jpg);  background-repeat: no-repeat;  
+	padding-left: 30px;  padding-right: 22px;    }
+td.Nav{	  border-left: 4px solid White;  
+	background-color: #F07700;    border-top: 1px solid #FAD0A7;	
+	background-image: url(bg_nav.gif);	background-position: right bottom;
+	background-repeat: no-repeat; height: 30px;	padding: 5px 6px 5px 4px;}
+td.Text{ padding-left: 20px;	padding-right: 20px;  padding-top: 10px; }
+td.Right{	background-image: url(bg_rightboxheader.gif);  background-repeat: no-repeat;  
+	background-color: #F07700;  padding-left: 11px;  padding-bottom: 9px;  
+	padding-right: 11px;  color: White;    font-size: 11px; }
+td.Footer{	border-top: 1px solid #7C7C7C;  font-size: 10px;  
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  
+	height: 27px;  padding-top: 3px;    }
+	
+/* HEADINGS
+--------------------------------------------------------------------------------------*/
+.Left h1{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  
+	font-size: 10px;  color:brown;  margin: 10px 0 0px 0;  font-weight: bold;     }
+.Left h3{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  
+	font-size: 10px;  color:#000000;  margin: 0px 0 0px 0;  font-weight: bold;     }
+
+.Left h2{ font-family: Tahoma, Arial;  font-size: 11px;  font-weight: bold;  
+	color: White;  margin: 12px 0 0px 0;     }
+.Text h1{ font-family: Arial, Helvetica, sans-serif;  font-size: 22px;  
+	font-weight: normal;  color: #006DB2;  background-image: url(bg_texttitle.gif);  
+	background-repeat: repeat-x;  margin: 4px 0 9px 0; }
+.Text h2{ font-family: Arial, Helvetica, sans-serif;  font-size: 12px;  
+	font-weight: bold;  color: #006DB2;  background-image: url(bg_texttitle.gif);  
+	background-repeat: repeat-x;  margin: 0px 0 0px 0; }
+.Right h1{ margin: 18px 0 10px 0;  font-size: 11px;  font-weight: bold;  color: White;  padding: 0;     }
+
+/* NAVIGATION 
+--------------------------------------------------------------------------------------*/
+.Nav a{	color: White;	text-decoration: none;	font-size: 11px;  font-weight: bold;  
+	font-family: Tahoma, Arial; 	 }
+.Left a{	font-family: Tahoma, Arial;  font-size: 11px;  font-weight: normal;  
+	color: #D0D753;  text-decoration: none;        }
+.Text a:hover{	color: #E60000;}
+.Right a{ color: White;  font-size: 11px;  }
+.Right a:hover{ color: #A52A2A; }
+.Footer a{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size: 10px;	
+	font-weight: bold;	color: #6E6E6E;  text-decoration: none; }
+.Footer a:hover{ color: #4682B4;}
+
+/* CONTENT
+--------------------------------------------------------------------------------------*/
+.SmallText{	font-size: 10px;}
+.Left p{ font-family: Tahoma, Arial;  font-size: 11px;  font-weight: normal;  
+	color: White;  margin: 2px 0 0px 0;  text-align: justify;  text-justify: distribute;  
+	line-height: 14px;   }
+.Text p{ text-align: justify;  text-justify: distribute;  margin-bottom: 19px;   }
+.Right p{ font-family: Tahoma, Arial;  font-size: 11px;  font-weight: normal;  
+	color: White;  margin: 2px 0 0px 0;  text-align: justify;  text-justify: distribute;  
+	line-height: 16px;   }
+
+/* FORMS
+--------------------------------------------------------------------------------------*/
+form{ margin: 0px; }
+input.LeftBox{	width: 50px;	height: 19px;	
+	font-family: Arial, Helvetica, sans-serif;	font-size: 11px;	background-color: White;  
+	border-left: 1px solid #086EAA;  border-top: 1px solid #086EAA;
+	margin-top: 5px;
+ 	 }
+
+/* MISC
+--------------------------------------------------------------------------------------*/
+
